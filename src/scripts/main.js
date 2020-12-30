@@ -20,6 +20,7 @@ $(function () {
 		btnPosition: function () {
 			$(window).on('load resize', function () {
 				$('#btns').css({
+					'right': '50%',
 					'margin-right': - $('.wrapper').innerWidth() / 2 + 'px'
 				})
 			})
