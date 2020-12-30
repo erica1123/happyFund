@@ -1,0 +1,41 @@
+doctype html
+html(lang="zh-TW")
+	head
+		include pages/_header.pug
+
+	body
+		.wrapper#kv
+			.header
+				a(href="https://www.feib.com.tw/", target="_blank")
+					img(src="./webroot/images/logo.png", alt="")
+			img.mb(src="./webroot/images/kv_mb.jpg" alt="")
+			img.pc(src="./webroot/images/kv_pc.jpg" alt="")
+		.wrapper#menu
+			ul
+				li
+					a(href="index.html")
+						| 如何
+						span 快樂退
+				li.active
+					a(href="info.html")
+						| 立即
+						span 享優惠
+				li
+					a(href="step.html")
+						| 熱心
+						span 小幫手
+				li
+					a(href="fund.html")
+						| 輕鬆
+						span 挑基金
+		.wrapper.info
+			.deco-1
+				img.mb(src="./webroot/images/img_mb_02-1.png" alt="")
+				img.pc(src="./webroot/images/img_pc_02-1.png" alt="")
+			include pages/_info.pug
+			.deco-2
+				img.mb(src="./webroot/images/img_mb_02-4.png" alt="")
+				img.pc(src="./webroot/images/img_pc_02-4.png" alt="")
+			include pages/_qa.pug
+		.wrapper.footer
+			include pages/_footer.pug

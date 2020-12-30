@@ -3,7 +3,7 @@
 $(function () {
   var methods = {
     navFixed: function navFixed() {
-      $(document).on('scroll', function () {
+      $(window).on('scroll', function () {
         var y = $(this).scrollTop();
         var r = $('#menu').innerHeight();
 
@@ -20,8 +20,16 @@ $(function () {
         }
       });
     },
+    btnPosition: function btnPosition() {
+      $(window).on('load resize', function () {
+        $('#btns').css({
+          'margin-right': -$('.wrapper').innerWidth() / 2 + 'px'
+        });
+      });
+    },
     acdToggle: function acdToggle() {
-      $('.acd .acd-item .acd-head').on('click', function () {
+      $('.acd .acd-item .acd-head').on('click', function (e) {
+        e.stopPropagation();
         $(this).toggleClass('is-active');
         $(this).siblings().slideToggle('slow');
       });
@@ -46,6 +54,7 @@ $(function () {
 
   var init = function init() {
     methods.navFixed();
+    methods.btnPosition();
     methods.acdToggle();
     methods.removeLocationHash();
   };

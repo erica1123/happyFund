@@ -1,14 +1,47 @@
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 body {
   background: #fad700;
   font-size: 16px; }
   body .wrapper {
     width: 100%;
     max-width: 640px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    -webkit-animation: fadeIn .5s ease-in forwards;
+            animation: fadeIn .5s ease-in forwards; }
   body img {
     width: 100%; }
   body .pc {
     display: none; }
+
+.header {
+  background: #fff;
+  padding: 10px 20px;
+  margin-bottom: 8px;
+  position: relative; }
+  .header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 8px;
+    background: -webkit-gradient(linear, left top, right top, from(#b09f66), color-stop(#c4b68a), color-stop(#e2dbc6), color-stop(#dcd4ba), to(#b6a671));
+    background: -o-linear-gradient(left, #b09f66, #c4b68a, #e2dbc6, #dcd4ba, #b6a671);
+    background: linear-gradient(to right, #b09f66, #c4b68a, #e2dbc6, #dcd4ba, #b6a671);
+    position: absolute;
+    top: 100%;
+    left: 0; }
+  .header img {
+    width: 185px; }
 
 #menu.fixed {
   position: fixed;
@@ -39,9 +72,9 @@ body {
             transform: translate(-50%, -50%); }
   #menu ul::before {
     width: 100%;
-    height: 2px; }
+    height: 1px; }
   #menu ul::after {
-    width: 2px;
+    width: 1px;
     height: 100%; }
 
 #menu li {
@@ -51,32 +84,37 @@ body {
   text-align: center;
   font-weight: 700;
   position: relative; }
-  #menu li a {
-    color: #ef4b23;
-    padding: 8px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background: #e5e5e5; }
-  #menu li span {
-    display: inline-block;
-    font-size: 26px;
-    font-weight: 900;
-    margin-left: 3px; }
   #menu li:hover a, #menu li.active a {
     color: #FFF;
     background: #ef4b23; }
   #menu li.active a {
     pointer-events: none; }
 
+#menu a {
+  color: #ef4b23;
+  padding: 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #e5e5e5; }
+
+#menu span {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 900;
+  margin-left: 3px; }
+
 .acd {
-  padding: 25px; }
+  padding: 25px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative; }
 
 .acd-item {
   background: #FFF; }
@@ -93,7 +131,8 @@ body {
     display: block;
     width: 20px;
     height: 4px;
-    background: #FFF;
+    background: url("../images/bg_ico.png") no-repeat 0 0;
+    background-size: 100% 100%;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -123,6 +162,8 @@ body {
 #note .acd-head {
   background: url("../images/bg_note.png") no-repeat 0 0;
   background-size: 100% 100%; }
+  #note .acd-head::before, #note .acd-head::after {
+    background: #FFF; }
 
 #note .acd-body p {
   font-weight: 500;
@@ -157,6 +198,30 @@ body {
   #note .acd-body .mark::before {
     background: red; }
 
+.deco-1, .deco-2 {
+  position: relative;
+  z-index: 1; }
+  .deco-1 img, .deco-2 img {
+    position: relative;
+    z-index: 1; }
+  .deco-1 .title, .deco-2 .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: auto;
+    height: 45px;
+    z-index: 2;
+    margin-top: -20px; }
+
+.deco-1 {
+  margin-bottom: -15%; }
+
+.deco-2 .title {
+  margin-top: -10px; }
+
 .info {
   background: #f2f2f2; }
   .info .title {
@@ -167,11 +232,6 @@ body {
       display: inline-block;
       width: 45px;
       vertical-align: middle; }
-  .info .info-head {
-    margin-bottom: -25%; }
-  .info .qa-head {
-    background: #F2f2f2;
-    margin-top: -10%; }
   .info ol {
     counter-increment: num1;
     margin-bottom: 5px; }
@@ -180,12 +240,13 @@ body {
 
 .para {
   padding: 0 20px;
-  margin-bottom: 30px; }
+  margin: -25% 0 30px; }
   .para li {
     margin-bottom: 20px; }
 
 .conditions {
-  padding: 0 20px; }
+  padding: 0 20px;
+  margin-bottom: -10%; }
   .conditions li {
     margin-bottom: 5px;
     list-style-position: inside;
@@ -246,3 +307,73 @@ body {
       z-index: 8; }
     #qa .acd-body li ol {
       font-weight: 400; }
+
+#fund .acd-head {
+  background: transparent url("../images/bg_dot2.png") repeat-y 0 0;
+  background-size: 100% auto;
+  padding: 10px 0 0; }
+  #fund .acd-head img {
+    margin-top: -10%; }
+  #fund .acd-head::before, #fund .acd-head::after {
+    width: 15px;
+    height: 3px;
+    top: auto;
+    bottom: 32px;
+    right: 10px; }
+  #fund .acd-head .line {
+    width: 100%;
+    height: 5px;
+    background: url("../images/bg_line.png") repeat-y 0 100%;
+    background-size: 100% auto; }
+
+#fund .acd-item {
+  background: transparent;
+  padding: 10% 0 5px; }
+
+#fund .acd-body {
+  background: #000;
+  padding-top: 7px; }
+  #fund .acd-body p {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px; }
+  #fund .acd-body table {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    border-spacing: 3px; }
+  #fund .acd-body th {
+    background: #fad700;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 5px; }
+  #fund .acd-body td {
+    background: #FFF;
+    vertical-align: middle;
+    padding: 5px; }
+    #fund .acd-body td span {
+      color: red; }
+    #fund .acd-body td:last-child {
+      text-align: left; }
+
+#btns {
+  position: fixed;
+  z-index: 9;
+  width: 80px;
+  right: 50%;
+  bottom: 0;
+  padding: 10px; }
+  #btns a {
+    display: inline-block; }
+
+.bottom {
+  padding: 20px 20px;
+  background: #c52b1e;
+  border-top: 8px solid #d8c8ad;
+  color: #FFF;
+  text-align: left;
+  line-height: 1.6; }
+  .bottom a {
+    color: #fff;
+    display: inline-block; }

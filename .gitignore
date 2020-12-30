@@ -1,13 +1,13 @@
 node_modules/
 pages/
-src/
+# src/
 .DS_Store
-.tmp
-.bowerrc
-.babelrc
+# .tmp
+# .bowerrc
+# .babelrc
 vendors
 package-lock.json
-gulpfile.babel.js
-package.json
-bower.json
+# gulpfile.babel.js
+# package.json
+# bower.json
 works.code-workspace

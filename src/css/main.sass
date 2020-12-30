@@ -1,0 +1,330 @@
+@import 'mixins'
+*
+  // outline: 1px solid red
+body
+	background: #fad700
+	font-size: 16px
+	.wrapper
+		width: 100%
+		max-width: 640px
+		margin: 0 auto
+		animation: fadeIn .5s ease-in forwards
+	img
+		width: 100%
+	.pc
+		display: none
+
+.header
+	background: #fff
+	padding: 10px 20px
+	margin-bottom: 8px
+	position: relative
+	&::after
+		content: ''
+		display: block
+		width: 100%
+		height: 8px
+		background: linear-gradient(to right, #b09f66, #c4b68a, #e2dbc6, #dcd4ba, #b6a671)
+		position: absolute
+		top: 100%
+		left: 0
+	img
+		width: 185px
+
+#menu
+	&.fixed
+		position: fixed
+		z-index: 9
+		top: 0
+		left: 0
+		right: 0
+		margin: auto
+		max-width: 640px
+		box-shadow: 0 10px 10px rgba(#000, .1)
+	ul
+		width: 100%
+		display: block
+		font-size: 0
+		position: relative
+		&::before, &::after
+			content: ''
+			display: block
+			background: #FFF
+			z-index: 8
+			+centeralign
+		&::before
+			width: 100%
+			height: 1px
+		&::after
+			width: 1px
+			height: 100%
+	li
+		display: inline-block
+		width: 50%
+		font-size: 20px
+		text-align: center
+		font-weight: 700
+		position: relative
+		&:hover a, &.active a
+			color: #FFF
+			background: #ef4b23
+		&.active a
+			pointer-events: none
+	a
+		color: #ef4b23
+		padding: 8px 0
+		display: flex
+		align-items: center
+		justify-content: center
+		background: #e5e5e5
+	span
+		display: inline-block
+		font-size: 26px
+		font-weight: 900
+		margin-left: 3px
+
+.acd
+	padding: 25px
+	margin: 0 auto
+	z-index: 2
+	position: relative
+.acd-item
+	background: #FFF
+.acd-head
+	padding: 10px 15px
+	font-size: 25px
+	font-weight: 700
+	color: #FFF
+	position: relative
+	cursor: pointer
+	&::before, &::after
+		content: ''
+		display: block
+		width: 20px
+		height: 4px
+		background: url('../images/bg_ico.png') no-repeat 0 0
+		background-size: 100% 100%
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 15px
+		margin: auto
+		transition: all, .2s
+	&::after
+		+rotate(90)
+	&.is-active::after
+		+rotate(0)
+.acd-body
+	background: url('../images/bg_shadow.png') no-repeat 0 0
+	background-size: 100% 40px
+	font-weight: 300
+	padding: 20px
+	display: none
+
+#note
+	.acd-head
+		background: url('../images/bg_note.png') no-repeat 0 0
+		background-size: 100% 100%
+		&::before, &::after
+			background: #FFF
+	.acd-body
+		p
+			font-weight: 500
+			font-size: 18px
+			margin-bottom: 10px
+			margin-left: -0.5em
+		a
+			display: inline-block
+			color: blue
+			text-decoration: underline
+			margin: 0 1px
+		ul
+			padding-left: 20px
+		li
+			margin-bottom: 15px
+			position: relative
+			&::before
+				content: ''
+				display: block
+				width: 10px
+				height: 10px
+				background: #000
+				position: absolute
+				top: 8px
+				left: -20px
+		.mark
+			color: red
+			&::before
+				background: red
+
+.deco-1, .deco-2
+	position: relative
+	z-index: 1
+	img
+		position: relative
+		z-index: 1
+	.title
+		+centeralign
+		width: auto
+		height: 45px
+		z-index: 2
+		margin-top: -20px
+.deco-1
+	margin-bottom: -15%
+.deco-2 .title
+	margin-top: -10px
+
+.info
+	background: #f2f2f2
+	.title
+		color: #ef4b23
+		font-weight: 500
+		font-size: 18px
+		img
+			display: inline-block
+			width: 45px
+			vertical-align: middle
+	ol
+		counter-increment: num1
+		margin-bottom: 5px
+		&::before
+			content: '(' counter(num1) ') '
+
+.para
+	padding: 0 20px
+	margin: -25% 0 30px
+	li
+		margin-bottom: 20px
+
+.conditions
+	padding: 0 20px
+	margin-bottom: -10%
+	li
+		margin-bottom: 5px
+		list-style-position: inside
+		font-weight: 300
+		font-size: 15px
+		counter-increment: num2
+		&::before
+			content: counter(num2) '. '
+		ol
+			margin-left: 1em
+
+#qa
+	background: #ef4b23
+	.acd-item
+		margin-bottom: 10px
+		background: #e5e5e5
+	.acd-head
+		background: #FFF
+		color: #000
+		font-size: 17px
+		font-weight: 500
+		line-height: 1.3
+		padding: 10px 38px 10px 50px
+		&::before, &::after, span
+			background: url('../images/bg_ico.png') no-repeat 0 0
+			background-size: 100% 100%
+		&::before, &::after
+			top: 22px
+			bottom: auto
+		span
+			display: inline-block
+			width: 30px
+			height: 30px
+			color: #FFF
+			text-align: center
+			font-size: 22px
+			font-family: 'Roboto', sans-serif
+			font-weight: 900
+			line-height: 1.45
+			position: absolute
+			top: 12px
+			left: 10px
+	.acd-body li
+		position: relative
+		padding-left: 10px
+		font-size: 15px
+		& + li
+			margin-top: 5px
+		&::before
+			content: ''
+			display: block
+			width: 3px
+			height: 3px
+			background: #000
+			position: absolute
+			top: 10px
+			left: 0
+			z-index: 8
+		ol
+			font-weight: 400
+#fund
+	.acd-head
+		background: transparent url('../images/bg_dot2.png') repeat-y 0 0
+		background-size: 100% auto
+		padding: 10px 0 0
+		img
+			margin-top: -10%
+		&::before, &::after
+			width: 15px
+			height: 3px
+			top: auto
+			bottom: 32px
+			right: 10px
+		.line
+			width: 100%
+			height: 5px
+			background: url('../images/bg_line.png') repeat-y 0 100%
+			background-size: 100% auto
+	.acd-item
+		background: transparent
+		padding: 10% 0 5px
+	.acd-body
+		background: #000
+		padding-top: 7px
+		p
+			color: #ffffff
+			font-weight: 700
+			font-size: 18px
+			margin-bottom: 5px
+		table
+			text-align: center
+			font-weight: 400
+			font-size: 14px
+			border-spacing: 3px
+		th
+			background: #fad700
+
+			vertical-align: middle
+			white-space: nowrap
+			padding: 5px
+		td
+			background: #FFF
+			vertical-align: middle
+			padding: 5px
+			span
+				color: red
+			&:last-child
+				text-align: left
+
+#btns
+	position: fixed
+	z-index: 9
+	width: 80px
+	right: 50%
+	bottom: 0
+	padding: 10px
+	a
+		display: inline-block
+
+.bottom
+	padding: 20px 20px
+	background: #c52b1e
+	border-top: 8px solid #d8c8ad
+	color: #FFF
+	text-align: left
+	line-height: 1.6
+	a
+		color: #fff
+		display: inline-block
