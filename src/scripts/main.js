@@ -6,12 +6,12 @@ $(function () {
 				let r = $('#menu').innerHeight()
 				if (y >= $('#kv').innerHeight()) {
 					$('#menu').addClass('fixed')
-					$('#menu + .wrapper').css({
+					$('#menu + .content').css({
 						'margin-top': r
 					})
 				} else {
 					$('#menu').removeClass('fixed')
-					$('#menu + .wrapper').css({
+					$('#menu + .content').css({
 						'margin-top': ''
 					})
 				}

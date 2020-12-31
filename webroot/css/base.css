@@ -19,7 +19,10 @@ html, body {
 
 .container {
   margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: fadeIn .5s ease-in forwards;
+          animation: fadeIn .5s ease-in forwards; }
   .container:after {
     content: '';
     clear: both;

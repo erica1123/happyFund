@@ -1,46 +1,42 @@
 doctype html
 html(lang="zh-TW")
   head
-    include pages/_header.pug
-
+    include pages/_meta.pug
   body
-    .wrapper#kv
-      .header
-        a(href="https://www.feib.com.tw/", target="_blank")
-          img(src="./webroot/images/logo.png", alt="")
-      img.mb(src="./webroot/images/kv_mb.jpg", alt="")
-      img.pc(src="./webroot/images/kv_pc.jpg", alt="")
-    .wrapper#menu
-      ul
-        li.active
-          a(href="index.html")
-            | 如何
-            span 快樂退
-        li
-          a(href="info.html")
-            | 立即
-            span 享優惠
-        li
-          a(href="step.html")
-            | 熱心
-            span 小幫手
-        li
-          a(href="fund.html")
-            | 輕鬆
-            span 挑基金
-    .wrapper.mb
-      img(src="./webroot/images/img_mb_01-1.jpg", alt="")
-      img(src="./webroot/images/img_mb_01-2.jpg", alt="")
-      img(src="./webroot/images/img_mb_01-3.jpg", alt="")
-      img(src="./webroot/images/img_mb_01-4.jpg", alt="")
-      img(src="./webroot/images/img_mb_01-5.jpg", alt="")
-      img(src="./webroot/images/img_mb_01-6.jpg", alt="")
-    .wrapper.pc
-      img(src="./webroot/images/img_pc_01-1.jpg", alt="")
-      img(src="./webroot/images/img_pc_01-2.jpg", alt="")
-      img(src="./webroot/images/img_pc_01-3.jpg", alt="")
-      img(src="./webroot/images/img_pc_01-4.jpg", alt="")
-      img(src="./webroot/images/img_pc_01-5.jpg", alt="")
-      
-    .wrapper.footer
-      include pages/_footer.pug
+    .container
+      include pages/_header.pug
+      .wrapper
+        #menu
+          ul
+            li.active
+              a(href="index.html")
+                | 如何
+                span 快樂退
+            li
+              a(href="info.html")
+                | 立即
+                span 享優惠
+            li
+              a(href="step.html")
+                | 熱心
+                span 小幫手
+            li
+              a(href="fund.html")
+                | 輕鬆
+                span 挑基金
+        .content
+          .mb
+            img(src="./webroot/images/img_mb_01-1.jpg", alt="")
+            img(src="./webroot/images/img_mb_01-2.jpg", alt="")
+            img(src="./webroot/images/img_mb_01-3.jpg", alt="")
+            img(src="./webroot/images/img_mb_01-4.jpg", alt="")
+            img(src="./webroot/images/img_mb_01-5.jpg", alt="")
+            img(src="./webroot/images/img_mb_01-6.jpg", alt="")
+          .pc
+            img(src="./webroot/images/img_pc_01-1.jpg", alt="")
+            img(src="./webroot/images/img_pc_01-2.jpg", alt="")
+            img(src="./webroot/images/img_pc_01-3.jpg", alt="")
+            img(src="./webroot/images/img_pc_01-4.jpg", alt="")
+            img(src="./webroot/images/img_pc_01-5.jpg", alt="")
+      .footer 
+        include pages/_footer.pug

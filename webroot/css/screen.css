@@ -17,6 +17,24 @@
     display: none; }
   body .pc {
     display: block; }
+  .header {
+    padding: 10px 20px;
+    margin-bottom: 8px; }
+    .header::after {
+      height: 8px; }
+    .header img {
+      height: 37px; }
+    .header a:first-child img {
+      height: 30px; }
+  .bottom {
+    border-top: 8px solid #d8c8ad; }
+    .bottom ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
   #menu {
     background: #000;
     overflow: hidden; }
@@ -167,13 +185,6 @@
         font-weight: 700; }
       #fund .acd-body td {
         padding: 10px; }
-  .bottom ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
   #btns {
     width: 100px;
     bottom: 90px; } }

@@ -1,145 +1,140 @@
 doctype html
 html(lang="zh-TW")
   head
-    include pages/_header.pug
-
+    include pages/_meta.pug
   body
-    .wrapper#kv
-      .header
-        a(href="https://www.feib.com.tw/", target="_blank")
-          img(src="./webroot/images/logo.png", alt="")
-      img.mb(src="./webroot/images/kv_mb.jpg", alt="")
-      img.pc(src="./webroot/images/kv_pc.jpg", alt="")
-    .wrapper#menu
-      ul
-        li
-          a(href="index.html")
-            | 如何
-            span 快樂退
-        li
-          a(href="info.html")
-            | 立即
-            span 享優惠
-        li
-          a(href="step.html")
-            | 熱心
-            span 小幫手
-        li.active
-          a(href="fund.html")
-            | 輕鬆
-            span 挑基金
-    .wrapper
-      .deco-1
-        img.title(src="./webroot/images/title_03.png", alt="")
-        img(src="./webroot/images/bg_title.png", alt="")
-      ul.acd#fund
-        li.acd-item
-          .acd-head
-            img(src="./webroot/images/img_role_01.png", alt="")
-            .line
-          .acd-body
-            p 可參考：
-            table
-              tr
-                th
-                  | 基金
-                  br
-                  | 代碼
-                th
-                  | 基金風險
-                  br
-                  | 屬性
-                th 基金名稱
-              tr
-                td JH96
-                td RR3
-                td
-                  | 摩根投資基金-多重收益基金(美元對沖)(累計)
-                  span (本基金有相當比重投資於非投資等級之高風險債券)
-              tr
-                td TG18
-                td RR3
-                td
-                  | 安聯收益成長基金-AT累積類股(美元)
-                  span (本基金有相當比重投資於非投資等級之高風險債券)
-              tr
-                td FG28
-                td RR3
-                td
-                  | 富蘭克林坦伯頓全球投資系列穩定月收益基金美元A(acc)
-                  span (本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)
+   .container
+      include pages/_header.pug
+      .wrapper
+        #menu
+          ul
+            li
+              a(href="index.html")
+                | 如何
+                span 快樂退
+            li
+              a(href="info.html")
+                | 立即
+                span 享優惠
+            li
+              a(href="step.html")
+                | 熱心
+                span 小幫手
+            li.active
+              a(href="fund.html")
+                | 輕鬆
+                span 挑基金
+        .content
+          .deco-1
+            img.title(src="./webroot/images/title_03.png", alt="")
+            img(src="./webroot/images/bg_title.png", alt="")
+          ul.acd#fund
+            li.acd-item
+              .acd-head
+                img(src="./webroot/images/img_role_01.png", alt="")
+                .line
+              .acd-body
+                p 可參考：
+                table
+                  tr
+                    th
+                      | 基金
+                      br
+                      | 代碼
+                    th
+                      | 基金風險
+                      br
+                      | 屬性
+                    th 基金名稱
+                  tr
+                    td JH96
+                    td RR3
+                    td
+                      | 摩根投資基金-多重收益基金(美元對沖)(累計)
+                      span (本基金有相當比重投資於非投資等級之高風險債券)
+                  tr
+                    td TG18
+                    td RR3
+                    td
+                      | 安聯收益成長基金-AT累積類股(美元)
+                      span (本基金有相當比重投資於非投資等級之高風險債券)
+                  tr
+                    td FG28
+                    td RR3
+                    td
+                      | 富蘭克林坦伯頓全球投資系列穩定月收益基金美元A(acc)
+                      span (本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)
 
-        li.acd-item
-          .acd-head
-            img(src="./webroot/images/img_role_02.png", alt="")
-            .line
-          .acd-body
-            p 可參考：
-            table
-              tr
-                th
-                  | 基金
-                  br
-                  | 代碼
-                th
-                  | 基金風險
-                  br
-                  | 屬性
-                th 基金名稱
-              tr
-                td FT86
-                td RR3
-                td
-                  | 法巴全球高收益債券基金H(美元)
-                  span (本基金主要係投資於非投資等級之高風險債券，基金之配息來源可能為本金)
-              tr
-                td NB62
-                td RR3
-                td
-                  | 路博邁投資基金-NB高收益債券基金T累積類股(美元)
-                  span (本基金主要係投資於非投資等級之高風險債券且配息來源可能為本金)
-              tr
-                td AL09
-                td RR3
-                td
-                  | NN(L)新興市場債券基金X股美元
-                  span (本基金有相當比重投資於非投資等級之高風險債券且配息來源可能為本金)
+            li.acd-item
+              .acd-head
+                img(src="./webroot/images/img_role_02.png", alt="")
+                .line
+              .acd-body
+                p 可參考：
+                table
+                  tr
+                    th
+                      | 基金
+                      br
+                      | 代碼
+                    th
+                      | 基金風險
+                      br
+                      | 屬性
+                    th 基金名稱
+                  tr
+                    td FT86
+                    td RR3
+                    td
+                      | 法巴全球高收益債券基金H(美元)
+                      span (本基金主要係投資於非投資等級之高風險債券，基金之配息來源可能為本金)
+                  tr
+                    td NB62
+                    td RR3
+                    td
+                      | 路博邁投資基金-NB高收益債券基金T累積類股(美元)
+                      span (本基金主要係投資於非投資等級之高風險債券且配息來源可能為本金)
+                  tr
+                    td AL09
+                    td RR3
+                    td
+                      | NN(L)新興市場債券基金X股美元
+                      span (本基金有相當比重投資於非投資等級之高風險債券且配息來源可能為本金)
 
-        li.acd-item
-          .acd-head
-            img(src="./webroot/images/img_role_03.png", alt="")
-            .line
-          .acd-body
-            p 可參考：
-            table
-              tr
-                th
-                  | 基金
-                  br
-                  | 代碼
-                th
-                  | 基金風險
-                  br
-                  | 屬性
-                th 基金名稱
-              tr
-                td LA09
-                td RR3
-                td
-                  | 貝萊德亞洲老虎債券基金A2-USD
-                  span (本基金有相當比重投資於非投資等級之高風險債券)
-              tr
-                td AC12
-                td RR3
-                td
-                  | 聯博-美國收益基金A2級別美元
-                  span (本基金有相當比重投資於非投資等級之高風險債券且配息來源可能為本金)
-              tr
-                td AL16
-                td RR3
-                td
-                  | NN(L)投資級公司債基金X股美元
-                  span (本基金之配息來源可能為本金)
-      
-    .wrapper.footer
-      include pages/_footer.pug
+            li.acd-item
+              .acd-head
+                img(src="./webroot/images/img_role_03.png", alt="")
+                .line
+              .acd-body
+                p 可參考：
+                table
+                  tr
+                    th
+                      | 基金
+                      br
+                      | 代碼
+                    th
+                      | 基金風險
+                      br
+                      | 屬性
+                    th 基金名稱
+                  tr
+                    td LA09
+                    td RR3
+                    td
+                      | 貝萊德亞洲老虎債券基金A2-USD
+                      span (本基金有相當比重投資於非投資等級之高風險債券)
+                  tr
+                    td AC12
+                    td RR3
+                    td
+                      | 聯博-美國收益基金A2級別美元
+                      span (本基金有相當比重投資於非投資等級之高風險債券且配息來源可能為本金)
+                  tr
+                    td AL16
+                    td RR3
+                    td
+                      | NN(L)投資級公司債基金X股美元
+                      span (本基金之配息來源可能為本金)
+      .footer
+        include pages/_footer.pug

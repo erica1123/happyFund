@@ -8,8 +8,6 @@ body
 		width: 100%
 		max-width: 640px
 		margin: 0 auto
-		opacity: 0
-		animation: fadeIn .5s ease-in forwards
 	img
 		width: 100%
 	.pc
@@ -17,20 +15,37 @@ body
 
 .header
 	background: #fff
-	padding: 10px 20px
-	margin-bottom: 8px
+	padding: 10px 10px
+	margin-bottom: 5px
 	position: relative
+	.wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
 	&::after
 		content: ''
 		display: block
 		width: 100%
-		height: 8px
+		height: 5px
 		background: linear-gradient(to right, #b09f66, #c4b68a, #e2dbc6, #dcd4ba, #b6a671)
 		position: absolute
 		top: 100%
 		left: 0
 	img
-		width: 185px
+		width: auto
+		height: 30px
+	a:first-child img
+		height: 27px
+.bottom
+	padding: 20px 20px
+	background: #c52b1e
+	border-top: 5px solid #d8c8ad
+	color: #FFF
+	text-align: left
+	line-height: 1.6
+	a
+		color: #fff
+		display: inline-block
 
 #menu
 	&.fixed
@@ -319,13 +334,3 @@ body
 	a
 		display: inline-block
 
-.bottom
-	padding: 20px 20px
-	background: #c52b1e
-	border-top: 8px solid #d8c8ad
-	color: #FFF
-	text-align: left
-	line-height: 1.6
-	a
-		color: #fff
-		display: inline-block
