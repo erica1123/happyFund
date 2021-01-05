@@ -268,7 +268,9 @@ body {
 
 .conditions {
   padding: 0 20px;
-  margin-bottom: -10%; }
+  margin-bottom: -10%;
+  position: relative;
+  z-index: 2; }
   .conditions li {
     margin-bottom: 5px;
     list-style-position: inside;
@@ -388,3 +390,5 @@ body {
   padding: 10px; }
   #btns a {
     display: inline-block; }
+
+/*# sourceMappingURL=main.css.map */

@@ -22,3 +22,4 @@ $(function () {
     });
   });
 });
+//# sourceMappingURL=slick.js.map
