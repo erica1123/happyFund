@@ -105,6 +105,10 @@
     display: inline-block;
     color: #fad700;
     margin: 0 5px; }
+  #order .arr {
+    display: inline-block;
+    width: 25px;
+    vertical-align: middle; }
 
 @media (min-width: 768px) {
   .slider ul {
@@ -138,5 +142,3 @@
   #order {
     background-size: auto 500px;
     padding-bottom: 200px; } }
-
-/*# sourceMappingURL=slider.css.map */

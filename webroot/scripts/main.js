@@ -70,4 +70,3 @@ $(function () {
   init();
   beforeunload();
 });
-//# sourceMappingURL=main.js.map
