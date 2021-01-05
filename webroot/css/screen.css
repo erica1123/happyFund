@@ -65,8 +65,20 @@
       #menu li.active {
         z-index: 10; }
     #menu.fixed {
-      max-width: 1024px;
-      margin-top: -1px; }
+      width: 100%;
+      max-width: none;
+      right: auto;
+      margin: 0 auto;
+      text-align: center;
+      background: transparent;
+      -webkit-box-shadow: 0 0 0 transparent;
+              box-shadow: 0 0 0 transparent; }
+      #menu.fixed ul {
+        margin: 0 auto;
+        max-width: 1024px;
+        padding-bottom: 10px;
+        -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); }
       #menu.fixed a {
         background: #e5e5e5;
         border-radius: 0; }
