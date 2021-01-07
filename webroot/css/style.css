@@ -2,14 +2,3 @@
 @import url(main.css);
 @import url(slider.css);
 @import url(screen.css);
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
