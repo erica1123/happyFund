@@ -7,7 +7,6 @@ pages/
 # .babelrc
 vendors
 package-lock.json
-kv_pc.jpg
 # gulpfile.babel.js
 # package.json
 # bower.json
