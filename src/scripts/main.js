@@ -54,12 +54,12 @@ $(function () {
 		methods.acdToggle()
 		methods.removeLocationHash()
 	}
-	let beforeunload = function () {
-		$(window).on('beforeunload', function () {
-			location.reload()
-			$(window).scrollTop(0)
-		})
-	}
+	// let beforeunload = function () {
+	// 	$(window).on('beforeunload', function () {
+	// 		location.reload()
+	// 		$(window).scrollTop(0)
+	// 	})
+	// }
 	init()
-	beforeunload()
+	// beforeunload()
 })

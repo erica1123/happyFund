@@ -98,8 +98,6 @@ body {
   #menu li:hover a, #menu li.active a {
     color: #FFF;
     background: #ef4b23; }
-  #menu li.active a {
-    pointer-events: none; }
 
 #menu a {
   color: #ef4b23;

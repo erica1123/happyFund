@@ -1,5 +1,6 @@
 node_modules/
 pages/
+webroot/images/kv_pc.jpg
 # src/
 .DS_Store
 # .tmp

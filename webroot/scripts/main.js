@@ -58,15 +58,13 @@ $(function () {
     methods.btnPosition();
     methods.acdToggle();
     methods.removeLocationHash();
-  };
+  }; // let beforeunload = function () {
+  // 	$(window).on('beforeunload', function () {
+  // 		location.reload()
+  // 		$(window).scrollTop(0)
+  // 	})
+  // }
 
-  var beforeunload = function beforeunload() {
-    $(window).on('beforeunload', function () {
-      location.reload();
-      $(window).scrollTop(0);
-    });
-  };
 
-  init();
-  beforeunload();
+  init(); // beforeunload()
 });
