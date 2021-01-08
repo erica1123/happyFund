@@ -10,30 +10,7 @@
     <script type="text/javascript" src="./www/js/thirdParty/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="./webroot/scripts/main.js"></script>
     <script type="text/javascript" src="./webroot/scripts/slick.js"></script>
-    <script>
-      $(function () {
-        $('#account ul, #order ul').slick({
-            centerMode: true,
-            centerPadding: '0',
-            slidesToShow: 3,
-            arrows: true,
-            responsive: [{
-                breakpoint: 640,
-                settings: {
-                    centerMode: false,
-                    slidesToShow: 1
-                }
-            }]
-        })
-        $(window).on('load', function(){
-            let $img = $('#account li:first-child img')
-            let h = $img.height().toFixed()
-            $('.slick-arrow').css({
-                'height': h
-            })
-        })
-      })
-    </script>
+    <script type="text/javascript" src="./webroot/scripts/slick-custom.js"></script>
   </head>
   <body>
     <div class="container">
