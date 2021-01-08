@@ -2705,3 +2705,4 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     return _;
   };
 });
+//# sourceMappingURL=slick.js.map

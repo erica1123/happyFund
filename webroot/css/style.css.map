@@ -1,0 +1,1 @@
+{"version":3,"sources":["css/style.sass"],"names":[],"mappings":"AACA,qBAAO;AACP,qBAAO;AACP,uBAAO;AAEP,uBAAO","file":"style.css","sourcesContent":["@import 'mixins';\n@import 'base.css';\n@import 'main.css';\n@import 'slider.css';\n// @import 'carousel.css'\n@import 'screen.css';\n\n\n\n\n\n"]}
